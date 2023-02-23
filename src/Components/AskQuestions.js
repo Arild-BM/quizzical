@@ -13,17 +13,17 @@ function AskQuestions() {
     }
 
     function Answers({id, answers}) {
-        const newAnswers = [...selectedAnswer]
+        const newAnswers = JSON.parse(JSON.stringify(selectedAnswer))
         
         newAnswers[id].answers[0].answer = answers.correct_answer
         newAnswers[id].answers[1].answer = answers.incorrect_answers[0]
         newAnswers[id].answers[2].answer = answers.incorrect_answers[1]
         newAnswers[id].answers[3].answer = answers.incorrect_answers[2]
-                
+        
         useEffect(() => {setSelectedAnswer(newAnswers)
             // console.log(id)
         // eslint-disable-next-line        
-        },[])
+        },[id])
         
         return (
             <div className="answers">

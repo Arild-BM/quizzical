@@ -80,22 +80,22 @@ let data = [
         id: 3,
         answers: [
             {
-                answer: "",
+                answer: "q",
                 correct: true,
                 selected:false
             },
             {
-                answer: "",
+                answer: "w",
                 correct: false,
                 selected:false
             },
             {
-                answer: "",
+                answer: "e",
                 correct: false,
                 selected:false
             },
             {
-                answer: "",
+                answer: "r",
                 correct: false,
                 selected:false
             }
@@ -106,22 +106,22 @@ let data = [
         id: 4,
         answers: [
             {
-                answer: "",
+                answer: "1",
                 correct: true,
                 selected:false
             },
             {
-                answer: "",
+                answer: "2",
                 correct: false,
                 selected:false
             },
             {
-                answer: "",
+                answer: "3",
                 correct: false,
                 selected:false
             },
             {
-                answer: "",
+                answer: "4",
                 correct: false,
                 selected:false
             }
