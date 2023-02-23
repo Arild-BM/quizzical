@@ -3,22 +3,22 @@ let data = [
         id: 0,
         answers: [
             {
-                answer: "",
+                answer: "Svar1",
                 correct: true,
                 selected:false
             },
             {
-                answer: "",
+                answer: "Svar2",
                 correct: false,
                 selected:false
             },
             {
-                answer: "",
+                answer: "Svar3",
                 correct: false,
                 selected:false
             },
             {
-                answer: "",
+                answer: "Svar4",
                 correct: false,
                 selected:false
             }
@@ -28,7 +28,7 @@ let data = [
         id: 1,
         answers: [
             {
-                answer: "",
+                answer: "osv",
                 correct: true,
                 selected:false
             },
@@ -80,22 +80,22 @@ let data = [
         id: 3,
         answers: [
             {
-                answer: "q",
+                answer: "",
                 correct: true,
                 selected:false
             },
             {
-                answer: "w",
+                answer: "",
                 correct: false,
                 selected:false
             },
             {
-                answer: "e",
+                answer: "",
                 correct: false,
                 selected:false
             },
             {
-                answer: "r",
+                answer: "",
                 correct: false,
                 selected:false
             }
@@ -106,22 +106,22 @@ let data = [
         id: 4,
         answers: [
             {
-                answer: "1",
+                answer: "",
                 correct: true,
                 selected:false
             },
             {
-                answer: "2",
+                answer: "",
                 correct: false,
                 selected:false
             },
             {
-                answer: "3",
+                answer: "",
                 correct: false,
                 selected:false
             },
             {
-                answer: "4",
+                answer: "Siste svar",
                 correct: false,
                 selected:false
             }

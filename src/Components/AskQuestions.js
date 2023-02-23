@@ -1,42 +1,17 @@
-import React, {useState, useContext, useEffect} from "react"
-import MyQuestions from "../contexts/MyQuestions"
-import data from "../data/data"
+import React, {useContext} from "react"
+import updateWord from "../updateWord";
+import Answers from "./Answers";
 
-let i = 0
+// Contexts
+import MyQuestions from "../contexts/MyQuestions"
 
 function AskQuestions() {
     const {questions} = useContext(MyQuestions);
-    const [selectedAnswer, setSelectedAnswer] = useState(data)
     
-    function updateWord(word) {
-        return word.replace(/&lt;/g, `<`).replace(/&gt;/g, `>`).replace(/&quot;/g, `"`).replace(/&#039;/g, `'`)
-    }
-
-    function Answers({id, answers}) {
-        const newAnswers = JSON.parse(JSON.stringify(selectedAnswer))
-        
-        newAnswers[id].answers[0].answer = answers.correct_answer
-        newAnswers[id].answers[1].answer = answers.incorrect_answers[0]
-        newAnswers[id].answers[2].answer = answers.incorrect_answers[1]
-        newAnswers[id].answers[3].answer = answers.incorrect_answers[2]
-        
-        useEffect(() => {setSelectedAnswer(newAnswers)
-            // console.log(id)
-        // eslint-disable-next-line        
-        },[id])
-        
-        return (
-            <div className="answers">
-                <h3>{updateWord(selectedAnswer[id].answers[0].answer)}</h3>
-                <h3>{updateWord(selectedAnswer[id].answers[1].answer)}</h3>
-                <h3>{updateWord(selectedAnswer[id].answers[2].answer)}</h3>
-                <h3>{updateWord(selectedAnswer[id].answers[3].answer)}</h3>
-            </div>
-        )
-    }
-        
+    
     function Question() { 
-        console.log(i)
+        
+        // Skriver ut 5 spørsmål og 4 svaralternativer
         return (
             <div className = "inner--box">
                 <h2>{updateWord(questions.results[0].question)}</h2>
@@ -62,8 +37,7 @@ function AskQuestions() {
                 <img className="blob2" src="./images/blob2.svg" alt="" />
             </div>
             <div className="text-main">
-            {console.log("------")}
-                <Question />
+                    <Question />
             </div>
         </div>
     )
