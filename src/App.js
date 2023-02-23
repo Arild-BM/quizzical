@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+
+import Main from "./Components/Main"
+import AskQuestions from "./Components/AskQuestions"
+
+// Libraries
+import { useState } from 'react'
+
+// Contexts
+import MyQuestions from "./contexts/MyQuestions"
+import NewPage from "./contexts/NewPage"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [questions, setQuestions] = useState({})
+    const [newP, setNewP] = useState(true)
+    
+    return (
+        <div>
+            <MyQuestions.Provider value={{questions, setQuestions}}>
+                <NewPage.Provider value={{newP, setNewP}}>
+                    {newP ? <Main /> : <AskQuestions />}
+                </NewPage.Provider>
+            </MyQuestions.Provider>
+        </div>
+    )
 }
 
-export default App;
+export default App
